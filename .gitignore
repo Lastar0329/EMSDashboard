@@ -1,0 +1,4 @@
+.claude/
+__pycache__/
+*.tmp
+debug_log*

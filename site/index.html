@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EMS 品管儀表板</title>
+<meta name="theme-color" content="#0b1220">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="EMS品管">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="vendor/leaflet.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div id="app">
+  <aside id="sidenav">
+    <div class="brand"><img src="icons/icon-192.png" alt=""><div><b>EMS 品管</b><small>嘉義市・嘉義縣</small></div></div>
+    <nav id="nav-d"></nav>
+    <div class="side-foot" id="side-foot"></div>
+  </aside>
+  <main>
+    <header id="topbar">
+      <div class="tb-row">
+        <h1 id="page-title">總覽</h1>
+        <button id="btn-view" class="chip" title="切換手機版／電腦版"></button>
+      </div>
+      <div class="filters" id="filters"></div>
+    </header>
+    <div id="content"><div class="loading">讀取資料中…</div></div>
+  </main>
+  <nav id="nav-m"></nav>
+</div>
+<script src="vendor/echarts.min.js"></script>
+<script src="vendor/leaflet.js"></script>
+<script src="indicators.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
