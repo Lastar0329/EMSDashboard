@@ -26,7 +26,13 @@
 - 版本：`app.js` 的 `BUILD` 與 `site/version.json` 的 `build` 要一起改；設定頁「檢查更新」比對兩者，換版用 `?v=` 重載。
 - 偵錯 log 在 localStorage `debug_log`，設定頁可看、可複製；不得寫病人資料。
 
-## 下一步（使用者決定中）
+## 部署（2026-10-15 上線）
 
-- 雲端部署位置與資料自動更新（哪台機器跑 `export_data.py` 並上傳）尚未決定。
+- 網址 https://lastar0329.github.io/EMSDashboard/ ；repo `Lastar0329/EMSDashboard`（Public，免費帳號 Pages 需公開）。
+- 發布＝`python publish.py`（匯出→commit→推 main→`git subtree split --prefix site` 成 gh-pages 強制推）；Pages 來源＝gh-pages 分支根目錄。AP8006 沒有 gh CLI，git 推送靠 Windows 認證管理員。
+- 改前端後記得同時改 `BUILD` 與 `version.json` 再發布，否則主畫面 PWA 不會提示更新。
+
+## 下一步
+
+- 資料自動更新（哪台機器、多久跑一次 `publish.py`）尚未決定。
 - 使用者看完樣板後會調整指標與圖表。
